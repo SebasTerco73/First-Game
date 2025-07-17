@@ -1,6 +1,6 @@
 # 🎮 Juego de Naves en Pygame
 
-Este es mi primer acercamiento al desarrollo de videos juegos, con un clásico juego arcade tipo *"Shooter"*, desarrollado en **Python** con la librería **Pygame**. Se controla una nave que dispara láseres para destruir meteoritos que van cayendo. El objetivo es no perder todas las vidas, evitando los choques y sumar la mayor cantidad de puntos posibles
+Este es mi primer acercamiento al desarrollo de videos juegos, con un clásico juego arcade tipo *"Shooter"*, desarrollado en **Python** con la librería **Pygame**. Se controla una nave que dispara lásers para destruir meteoritos que van cayendo. El objetivo es no perder todas las vidas, evitando los choques y sumar la mayor cantidad de puntos posibles
 
 ---
 
