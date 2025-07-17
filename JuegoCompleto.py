@@ -39,7 +39,7 @@ def create_meteor():
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.image.load("/assets/player.png").convert_alpha()
+        self.image = pygame.image.load("assets/player.png").convert_alpha()
         # self.image = pygame.transform.scale(self.image, (100, 100))
         self.image
         self.rect = self.image.get_rect()
@@ -71,7 +71,7 @@ class Player(pygame.sprite.Sprite):
 class Meteor(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        # self.image = pygame.image.load("/assets/meteorGrey_med1.png").convert_alpha()
+        # self.image = pygame.image.load("assets/meteorGrey_med1.png").convert_alpha()
         self.image = random.choice(meteor_images)
         # self.image = pygame.transform.scale(self.image, (100, 100))
         self.rect = self.image.get_rect()
@@ -95,7 +95,7 @@ class Meteor(pygame.sprite.Sprite):
 class Bullet(pygame.sprite.Sprite):
     def __init__(self,x,y ):
         super().__init__()
-        self.image = pygame.image.load("/assets/laser1.png").convert_alpha()
+        self.image = pygame.image.load("assets/laser1.png").convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.y = y
         # Centro real del objeto
@@ -151,9 +151,9 @@ def show_go_screen():
                     waiting = False
 
 meteor_images = []
-meteor_list = ["/assets/meteorGrey_big1.png", "/assets/meteorGrey_big2.png", "/assets/meteorGrey_big3.png", "/assets/meteorGrey_big4.png",
-				"/assets/meteorGrey_med1.png", "/assets/meteorGrey_med2.png", "/assets/meteorGrey_small1.png", "/assets/meteorGrey_small2.png",
-				"/assets/meteorGrey_tiny1.png", "/assets/meteorGrey_tiny2.png"]
+meteor_list = ["assets/meteorGrey_big1.png", "assets/meteorGrey_big2.png", "assets/meteorGrey_big3.png", "assets/meteorGrey_big4.png",
+				"assets/meteorGrey_med1.png", "assets/meteorGrey_med2.png", "assets/meteorGrey_small1.png", "assets/meteorGrey_small2.png",
+				"assets/meteorGrey_tiny1.png", "assets/meteorGrey_tiny2.png"]
 
 for img in meteor_list:
     meteor_images.append(pygame.image.load(img).convert_alpha())
@@ -161,18 +161,18 @@ for img in meteor_list:
 # Animacion explosiones
 explosion_anim = []
 for i in range(9):
-    file = "/assets/regularExplosion0{}.png".format(i)
+    file = "assets/regularExplosion0{}.png".format(i)
     img = pygame.image.load(file).convert_alpha()
     img_scale = pygame.transform.scale(img,(70,70))
     explosion_anim.append(img_scale)
 
 # Imagen de fondo
-background = pygame.image.load("/assets/background.png").convert_alpha()
+background = pygame.image.load("assets/background.png").convert_alpha()
 
 # Sonidos
-laser_sound = pygame.mixer.Sound("/assets/laser5.ogg")
-explosion_sound = pygame.mixer.Sound("/assets/explosion.wav")
-pygame.mixer.music.load("/assets/music.ogg")
+laser_sound = pygame.mixer.Sound("assets/laser5.ogg")
+explosion_sound = pygame.mixer.Sound("assets/explosion.wav")
+pygame.mixer.music.load("assets/music.ogg")
 pygame.mixer.music.set_volume(0.2)
 
 #Reproducir musica, y que se repita infinitamente. Si el valor es por ejemplo 2, se reproduce 2 veces
